@@ -476,10 +476,30 @@ a[href*="#followme"]::before {
   }    
 
 /* BTN ADD */
+.btn_app{
+  background-color: #FF4646 !important;
+    border-color: #FF4646;
+}
 .btn_add{
     bottom: 2rem;
     position: fixed;
     right: 2rem;
     border-radius: 5rem;
     z-index: 100;
+    background-color: #FF4646 !important;
+    border-color: #FF4646;
+  }
+  
+.btn_add:hover {
+    border-color: #FF4646;
+    background-color: #FF4646 !important;
+}
+
+.icon_down_card{
+  margin-left: auto !important;
+}
+
+/* FORMS UTILS */
+.btn-utils{
+  margin-right: auto !important;
 }
