@@ -218,7 +218,7 @@ function isOnline(){
         VanillaToasts.create({
             title: 'Offline',
             text: 'Por el momento no puedes publicar ofertas, solo verlas',
-            icon: '../img/icons/putyouroffer.png',
+            icon: '/PutYourOffer/img/icons/putyouroffer.png',
             type: 'error', 
             timeout: 3000,
         });
