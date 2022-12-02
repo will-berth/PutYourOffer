@@ -209,7 +209,7 @@ function isOnline(){
         VanillaToasts.create({
             title: 'Online',
             text: 'Ya tienes internet, ahora puedes publicar',
-            icon: '../img/icons/putyouroffer.png',
+            icon: '/PutYourOffer/img/icons/putyouroffer.png',
             type: 'success',
             timeout: 3000,
         });
