@@ -22,97 +22,24 @@
             <div class="sidebar-header">
             <div class="sidebar-brand">
               <a href="#">PutYourOffers</a></div></div>
-            <li><a href="#home">Soriana</a></li>
-            <li><a href="#about">Aurrera</a></li>
-            <li><a href="#events">Oxxo</a></li>
-            <li><a href="#team">7-Eleven</a></li>
+            <li><a class="btn-filtro" href="#soriana" filtro-val="soriana">Soriana</a></li>
+            <li><a class="btn-filtro" href="#aurrera" filtro-val="aurrera">Aurrera</a></li>
+            <li><a class="btn-filtro" href="#oxxo" filtro-val="oxxo">Oxxo</a></li>
+            <li><a class="btn-filtro" href="#eleven" filtro-val="eleven">7-Eleven</a></li>
            </ul>
        </nav>
              <!-- /#sidebar-wrapper -->
      
              <!-- Page Content -->
         <div id="page-content-wrapper">
-            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+            <button id="btn-sidebar" type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
                 <span class="hamb-top"></span>
                 <span class="hamb-middle"></span>
                 <span class="hamb-bottom"></span>
             </button>
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-1 col-md-6 col-lg-4 mt-4">
-                        <div class="card">
-                            <img src="img/producto1.jpeg" class="card__image" alt="" />
-                            <div class="card__overlay">
-                              <div class="card__header">
-                                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                  <!-- <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> -->
-                                  <img class="card__thumb" src="img/tiendas/soriana.png" alt="" />
-                                  <div class="card__header-text">
-                                  <h3 class="card__title">Soriana</h3>            
-                                  <span class="card__status">27/11/2022</span>
-                              </div>
-                              <i class="icon_down_card fa fa-arrow-down" aria-hidden="true"></i>
-                            </div>
-                            <p class="card__description">Las manzanas estan muy baratas, les recomiendo ir a comprarlas</p>
-                            <button type="button" class="btn btn-danger w-100" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver ubicación</button>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="col-sm-1 col-md-6 col-lg-4 mt-4">
-                        <div class="card">
-                            <img src="img/producto4.jpeg" class="card__image" alt="" />
-                            <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                <img class="card__thumb" src="img/tiendas/aurrera.jpg" alt="" />
-                                <div class="card__header-text">
-                                <h3 class="card__title">Bodega Aurrera</h3>            
-                                <span class="card__status">28/11/2022</span>
-                                </div>
-                                <i class="icon_down_card fa fa-arrow-down" aria-hidden="true"></i>
-                            </div>
-                            <p class="card__description">Encontré esta crema para cafe en polvo al 2x1</p>
-                            <button type="button" class="btn btn-danger w-100" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver ubicación</button>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="col-sm-1 col-md-6 col-lg-4 mt-4">
-                        <div class="card">
-                            <img src="img/producto3.jpeg" class="card__image" alt="" />
-                            <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                <!-- <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> -->
-                                <img class="card__thumb" src="img/tiendas/oxxo.png" alt="" />
-                                <div class="card__header-text">
-                                <h3 class="card__title">Oxxo</h3>            
-                                <span class="card__status">29/11/2022</span>
-                                </div>
-                                <i class="icon_down_card fa fa-arrow-down" aria-hidden="true"></i>
-                            </div>
-                            <p class="card__description">Mayonesa la costeña con 10% de descuento, ya quedan pocos</p>
-                            <button type="button" class="btn btn-danger w-100" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver ubicación</button>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="col-sm-1 col-md-6 col-lg-4 mt-4">
-                        <div class="card">
-                            <img src="img/producto2.jpeg" class="card__image" alt="" />
-                            <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                <img class="card__thumb" src="img/tiendas/eleven.jpg" alt="" />
-                                <div class="card__header-text">
-                                <h3 class="card__title">7-Eleven</h3>            
-                                <span class="card__status">30/11/2022</span>
-                                </div>
-                                <i class="icon_down_card fa fa-arrow-down" aria-hidden="true"></i>
-                            </div>
-                            <p class="card__description">Salsa valentina a solo 9 pesos, rapido que se acaban</p>
-                            <button type="button" class="btn btn-danger w-100" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver ubicación</button>
-                            </div>
-                        </div>   
-                    </div>
+                <div class="row lista-productos">
+                    
                 </div>
             </div>
             <button type="button" class="btn_add btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-plus" aria-hidden="true"></i></button>
@@ -127,7 +54,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Publicar una oferta</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button id="btn-modal-publicar" type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -135,27 +62,44 @@
               <form>
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Tienda:</label>
-                  <select required class="form-control" id="exampleFormControlSelect1">
-                    <option>Soriana</option>
-                    <option>Bodega Aurrera</option>
-                    <option>Oxxo</option>
-                    <option>7-Eleven</option>
+                  <select id="tiendas-select" required class="form-control" id="exampleFormControlSelect1">
+                    <option selected value="soriana">Soriana</option>
+                    <option value="aurrera">Bodega Aurrera</option>
+                    <option value="oxxo">Oxxo</option>
+                    <option value="eleven">7-Eleven</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="message-text" class="col-form-label">Mensaje:</label>
-                  <textarea class="form-control" id="message-text" maxlength="100"></textarea>
+                  <textarea id="mensaje" class="form-control" id="message-text" maxlength="100"></textarea>
                   <small id="passwordHelpBlock" class="form-text text-muted">
                     Escribe un mensaje de máximo 100 caracteres
                   </small>
                 </div>
+                <div class="form-group">
+                  <div class="camara-contenedor fadeIn fast btn-oculto" align="center">
+                    <video id="player" autoplay style="height: 300px;"></video>
+
+                    <!-- <button id="tomar-foto-btn">
+                        <i class="fa fa-camera"></i>
+                        Tomar Foto
+                    </button> -->
+                  </div>
+                  <button id="btn-tomar-foto" type="button" class="btn_app btn btn-light text-white w-100 btn-oculto">Tomar fotografia</button>
+                </div>
+                <div class="form-group" align="center">
+                  <div class="mapa-view">
+                    
+                  </div>
+                  <div class="loader-location"><div></div><div></div></div>
+                </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-camera" aria-hidden="true"></i></button>
-              <button type="button" class="btn-utils btn btn-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
+              <button id="btnPhoto" type="button" class="btn btn-light"><i class="fa fa-camera" aria-hidden="true"></i></button>
+              <button id="btnLocation" type="button" class="btn-utils btn btn-light"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
               
-              <button type="button" class="btn_app btn btn-primary">Publicar</button>
+              <button id="btn-post-offer" type="button" class="btn_app btn btn-primary">Publicar</button>
             </div>
           </div>
         </div>
@@ -165,7 +109,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/tether@2.0.0-beta.5/dist/js/tether.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.find.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/camara-class.js"></script>
+    <script src="js/sw-db.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

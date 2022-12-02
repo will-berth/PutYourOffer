@@ -112,16 +112,16 @@ html { height: 100%;}
     background-color: #ec1b5a;   
 }
 .sidebar-nav li:nth-child(5n+2):before {
-    background-color: #79aefe;   
+    background-color: #EB605E;   
 }
 .sidebar-nav li:nth-child(5n+3):before {
-    background-color: #314190;   
+    background-color: #40B655;   
 }
 .sidebar-nav li:nth-child(5n+4):before {
-    background-color: #279636;   
+    background-color: #DF1F26;   
 }
 .sidebar-nav li:nth-child(5n+5):before {
-    background-color: #7d5d81;   
+    background-color: #007F61;   
 }
 
 .sidebar-nav li:hover:before,
@@ -192,57 +192,7 @@ html { height: 100%;}
 .dropdown-menu.show {
     top: 0;
 }
-/*Fontawesome icons*/
-.nav.sidebar-nav li a::before {
-    font-family: fontawesome;
-    content: "\f12e";
-    vertical-align: baseline;
-    display: inline-block;
-    padding-right: 5px;
-}
-a[href*="#home"]::before {
-  content: "\f015" !important;
-}
-a[href*="#about"]::before {
-  content: "\f129" !important;
-}
-a[href*="#events"]::before {
-  content: "\f073" !important;
-}
-a[href*="#events"]::before {
-  content: "\f073" !important;
-}
-a[href*="#team"]::before {
-  content: "\f0c0" !important;
-}
-a[href*="#works"]::before {
-  content: "\f0b1" !important;
-}
-a[href*="#pictures"]::before {
-  content: "\f03e" !important;
-}
-a[href*="#videos"]::before {
-  content: "\f03d" !important;
-}
-a[href*="#books"]::before {
-  content: "\f02d" !important;
-}
-a[href*="#art"]::before {
-  content: "\f1fc" !important;
-}
-a[href*="#awards"]::before {
-  content: "\f02e" !important;
-}
-a[href*="#services"]::before {
-  content: "\f013" !important;
-}
-a[href*="#contact"]::before {
-  content: "\f086" !important;
-}
-a[href*="#followme"]::before {
-  content: "\f099" !important;
-  color: #0084b4;
-}
+
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
@@ -502,4 +452,61 @@ a[href*="#followme"]::before {
 /* FORMS UTILS */
 .btn-utils{
   margin-right: auto !important;
+}
+.btn-oculto{
+  display: none;
+}
+
+.field-success{
+  background-color: green !important;
+  border-color: green;
+  color: white;
+}
+
+/* Loader */
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid rgb(149, 149, 149);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
 }

@@ -19,7 +19,9 @@ const APP_SHELL = [
     'img/producto2.jpeg',
     'img/producto3.jpeg',
     'img/producto4.jpeg',
+    'js/camara-class.js',
     'js/app.js',
+    'js/sw-db.js',
     'js/sidebar.js'
 ];
 
@@ -30,7 +32,8 @@ const APP_SHELL_INMUTABLE = [
     'https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js',
     'https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js',
     'https://cdn.jsdelivr.net/npm/tether@2.0.0-beta.5/dist/js/tether.min.js',
-    'https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js'
+    'https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js',
+    'https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.find.js'
 ];
 
 self.addEventListener('install', e => {
