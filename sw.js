@@ -6,7 +6,6 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 
 const APP_SHELL = [
-    'PutYourOffer/',
     'index.html',
     'css/style.css',
     'css/font-awesome/css/font-awesome.css',
