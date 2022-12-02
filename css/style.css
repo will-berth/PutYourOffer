@@ -12,7 +12,14 @@ body {
     background-color: #CFD8DC;
 }
 body,
-html { height: 100%;}
+html { 
+  height: 100%;
+
+  overscroll-behavior-y: contain;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
 .nav .open > a, 
 .nav .open > a:hover, 
 .nav .open > a:focus {background-color: transparent;}

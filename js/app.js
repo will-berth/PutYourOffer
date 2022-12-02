@@ -90,11 +90,12 @@ function crearProductoCard(tienda, mensaje, fotoDB, latItem, lngItem, fecha){
             <i class="icon_down_card fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <p class="card__description">${mensaje}</p>
-            <button type="button" class="btn btn-danger w-100" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Ver ubicación</button>
+            <button type="button" class="btn btn-danger w-100" onclick="showLocation(${latItem}, ${lngItem})" data-toggle="modal" data-target="#locationModal" data-whatever="@mdo">Ver ubicación</button>
             </div>
         </div>   
     </div>
     `
+    btnShowLocation = $('.btn-show-location');
     listaProductos.append(contenido);
 }
 
@@ -111,6 +112,20 @@ function formMostrarMapa(lat, lng){
     `;
     contenedorMapa.append(contenido)
     locationForm.addClass('field-success')
+}
+
+function showLocation(latLocation, lngLocation) {
+    let location = $('#location-view');
+    location.html('');
+    let contenido = `
+        <iframe
+        width="100%"
+        height="250"
+        frameborder="0"
+        src="https://www.google.com/maps/embed/v1/view?key=${ googleMapKey }&center=${ latLocation },${ lngLocation }&zoom=17" allowfullscreen>
+        </iframe>
+    `;
+    location.append(contenido)
 }
 
 fotoForm.click(function () {
@@ -180,3 +195,29 @@ btnFiltro.click(function (e) {
     filtrarOfertar(tienda)
     btnSidebar.click();
 })
+
+function isOnline(){
+    if(navigator.onLine){
+        VanillaToasts.create({
+            title: 'Online',
+            text: 'Ya tienes internet, ahora puedes publicar',
+            icon: '../img/icons/putyouroffer.png',
+            type: 'success',
+            timeout: 3000,
+        });
+    }else{
+        console.log('offline');
+        VanillaToasts.create({
+            title: 'Offline',
+            text: 'Por el momento no puedes publicar ofertas, solo verlas',
+            icon: '../img/icons/putyouroffer.png',
+            type: 'error', 
+            timeout: 3000,
+        });
+    }
+}
+
+window.addEventListener('online', isOnline);
+window.addEventListener('offline', isOnline);
+
+// isOnline();//Para que siempre se dispare

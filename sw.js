@@ -19,6 +19,8 @@ const APP_SHELL = [
     'img/producto2.jpeg',
     'img/producto3.jpeg',
     'img/producto4.jpeg',
+    'js/libs/vanillatoasts.js',
+    'css/vanillatoasts.css',
     'js/camara-class.js',
     'js/app.js',
     'js/sw-db.js',
