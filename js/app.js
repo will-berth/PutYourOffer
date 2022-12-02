@@ -1,5 +1,13 @@
+var url = window.location.href;
+var swLocation = '/PutYourOffer/sw.js';
+
 if ( navigator.serviceWorker ) {
-    navigator.serviceWorker.register( '/sw.js' );
+
+    if ( url.includes('localhost') ) {
+        swLocation = '/sw.js';
+    }
+
+    navigator.serviceWorker.register( swLocation);
 }
 
 var googleMapKey = 'AIzaSyA5mjCwx1TRLuBAjwQw84WE6h5ErSe7Uj8';
@@ -119,7 +127,7 @@ function showLocation(latLocation, lngLocation) {
     location.html('');
     let contenido = `
         <iframe
-        width="100%"
+        width="100%"<
         height="250"
         frameborder="0"
         src="https://www.google.com/maps/embed/v1/view?key=${ googleMapKey }&center=${ latLocation },${ lngLocation }&zoom=17" allowfullscreen>
